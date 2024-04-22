@@ -50,3 +50,15 @@ console.log(resultado5)
 // not !
 // Estos operadores permiten condicionar las evaluaciones que se realizan dentro de los condicionales
 
+const oR = true || false
+console.log(oR)
+// Una de las condiciones debe ser correcta
+
+const and = true && true
+console.log(and)
+// las dos opciones deben ser correctas
+
+const not = !true
+// Le da vuelta al resultado, si es true pasa a ser false
+
+console.log(not)
