@@ -45,8 +45,6 @@ let suma = 1;
 function Suma(n4) {
     let contador = 0;
     do{
-        console.log(n4 + contador)
-        contador++;
-
+        
     } while(n4 >= 0) 
 }
