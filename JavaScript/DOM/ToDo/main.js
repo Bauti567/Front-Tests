@@ -1,7 +1,7 @@
 // Vamos a crear un todo list para poder agregar elementos a una lista
 
 const todos = []; // Almacenar los todos
-
+const arr = [1,2,3,4,5]
 
 window.onload = ()=>{
     // Obteniendo los valoes del DOM
@@ -15,11 +15,15 @@ window.onload = ()=>{
         todos.push(todoText); // Agregar los elementos del arreglo
         console.log(todoText); // MOSTRANDO EL VALOR DEL INPUT
         console.log(todos)
-        const todoList = document.getElementById('list')
+        const todoList = document.getElementById('list') // TR
         const todosTemplate = todos.map(t => '<li>' + t + '</li>');
         todoList.innerHTML = todosTemplate.join('');
-        
         console.log(todosTemplate)
+        
+        document.querySelectorAll('#todo-list') // Trae todos los elementos dentro del HTML
+        
+        
     }
+    
 
 }
