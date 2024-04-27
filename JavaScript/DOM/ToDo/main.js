@@ -20,10 +20,26 @@ window.onload = ()=>{
         todoList.innerHTML = todosTemplate.join('');
         console.log(todosTemplate)
         
-        document.querySelectorAll('#todo-list') // Trae todos los elementos dentro del HTML
-        
+        // Va a traer todos los elementos dentro de ese ID de derecha a izauierda
+        const elementos = document.querySelectorAll('#todo-list li') // Trae todos los elementos dentro del HTML
+        // Iteramos con ForEach
+        elementos.forEach((elemento, i)=>{
+            // Añadir evento escuchador al elemento
+            elemento.addEventListener('click',()=>{
+                // Mientras se va iterando vamos agregando un evento
+                elemento.addEventListener('click', ()=>{
+                    elemento.parentNode.removeChild(elemento)
+                })
+                // La funcion paren node referencia al padre 
+                console.log(elemento, i);
+                todos.splice(i,1);
+                
+
+                
+            });
+        })
         
     }
     
-
+ 
 }
