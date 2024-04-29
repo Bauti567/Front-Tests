@@ -7,13 +7,28 @@
 </head>
 <body>
     <main class="container" id="container">
-        <form action="" class="form" id="form">
+        <div class="products">
+            <h1>SELECCIONA EL PRODUCTO QUE DESEAS</h1>
+            <select name="Products" id="">
+                <option value="">Leche</option>
+                <option value="">Huevos</option>
+                <option value="">Carne</option>
+                <option value="">Lenteja</option>
+            </select>
+        </div>
+        
+        <form action="#" class="form" id="form">
             <label for="">Ingresa el valor del producto</label>
+            <br>
             <input type="text" id="price">
+            <br>
             <label for="">El iva se encuentra en el 19%</label>
-           <button type="submit">Enviar</button>    
+            <br>
+            <button type="submit">Enviar</button>    
         </form>
-
+        <div class="result">
+            <span>El valor a pagar es de: <b id="result"></b></span>
+        </div>
     </main>
 
 
