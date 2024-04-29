@@ -1,7 +1,13 @@
 // Vamos a crear un todo list para poder agregar elementos a una lista
 
 const todos = []; // Almacenar los todos
+
+//const todos = JSON.localStorage.getItem('todos') || []; 
+// La funcion Json convierte los strings a codigo javaScript
+
 const arr = [1,2,3,4,5]
+// Los short circuits es cuando se llama una instruccion
+// pero la instruccion no retorna nada
 
 const render = ()=>{ // Creando la fincion render para crear porciones de codigo
     const todoList = document.getElementById('list') // TR
