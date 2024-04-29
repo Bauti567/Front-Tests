@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: auto;
+    
+}
+body{
+    background-color: #7209B7;
+}
+
+.container h1{
+    padding: 10px;
+    margin: 20px 0;
+}
+
+
+.container {
+    width: 700px;
+    height: 500px;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #fff;
+}
+
+.productSelect {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.btn {
+    padding: 20px;
+    height: 5px;
+    margin: 10px 0;
+    width: 70%;
+    text-align: center;
+
+}

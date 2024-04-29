@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Ejercicio IVA - JS</title>
 </head>
 <body>
     <main class="container" id="container">
-        <div class="products">
+        <div>
             <h1>SELECCIONA EL PRODUCTO QUE DESEAS</h1>
-            <select name="Products" id="">
-                <option value="">Leche</option>
-                <option value="">Huevos</option>
-                <option value="">Carne</option>
-                <option value="">Lenteja</option>
+            <select name="Products" id="productSelect" class="productSelect">
+                <option value="25000">Leche ($25000)</option>
+                <option value="16000">Huevos ($16000)</option>
+                <option value="10000">Carne ($10000)</option>
+                <option value="4000">Lenteja ($4000)</option>
             </select>
         </div>
-        
+
         <form action="#" class="form" id="form">
-            <label for="">Ingresa el valor del producto</label>
+            <label for="">Ingresa la cantidad del producto</label>
             <br>
-            <input type="text" id="price">
+            <input type="number" id="quantity" value="1">
             <br>
-            <label for="">El iva se encuentra en el 19%</label>
-            <br>
-            <button type="submit">Enviar</button>    
+            <button type="submit" class="btn">Calcular</button>    
         </form>
         <div class="result">
-            <span>El valor a pagar es de: <b id="result"></b></span>
+            <span>El valor del IVA es: <b id="result"></b></span>
+            <span>El valor total a pagar es: <b id="total"></b></span>
         </div>
     </main>
 
