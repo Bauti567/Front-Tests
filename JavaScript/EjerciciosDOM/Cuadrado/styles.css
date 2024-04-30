@@ -4,3 +4,33 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+body{
+    background: #5c258d; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5c258d, #4389a2); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5c258d, #4389a2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container{
+    display: flex;
+}
+
+.container form {
+    padding: 20px;
+    align-items: center;
+    width: 500px;
+    height: 550px;
+    background-color: #fff;
+    border-radius: 25px;
+
+
+}
+
+.container form span{
+    width: 100%;
+}
+
+.container form input {
+    width: 95%;
+
+}
