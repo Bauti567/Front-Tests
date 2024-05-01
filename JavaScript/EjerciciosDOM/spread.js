@@ -20,3 +20,22 @@ console.log(a === c);
 
 /// ------------------- PROMISES ------------------------------
 
+Promise.resolve(2) // Las promesas me permiten trabajar de
+    .then(valor => valor + 1) // manera asincrona todo el código
+    .them(valor => console.log(valor))
+
+    // ESTE CODIGO ES PARA TRABAJAR CON API'S
+
+// --- catch y Reject
+// La funcion Reject me indica cuando una llamada a API ha sido rechazada
+
+const promise = new Promise((resolve, reject) => {
+    // Simular un error
+    const error = new Error('Algo salió mal');
+    reject(error);
+});
+
+// Por otro lado catch dentro de las promesas se utiliza para manejar el rechazo de una promesa
+promise.catch((error) => {
+    console.error('La promesa fue rechazada:', error);
+});
