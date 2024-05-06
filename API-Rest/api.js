@@ -22,10 +22,30 @@ app.post('/', (req,res)=>{
 
 })
 
+// Status de la aplicación
+// 200 ok
+// 201 ok creado
+// 204 Procesado & no content PUT PATCH y Delete
+
+// El verbo put me persmite actualizar el recurso de la API
+// el /:id es un dato variable pero que va a aparecer en la ruta
+app.put('/:id', (req,res)=>{
+   res.sendStatus(204); // Solamente retorna el codigo de estado
+    console.log(req.params)
+    // Mostrando por consola los parametros de la URL
+})
+
+app.patch('/:id', (req,res)=>{
+    res.sendStatus(204);
+
+})
+
+app.delete('/:id', (req,res)=>{
+    res.sendStatus(204);
+})
+
 app.listen(port, ()=>{
     console.log('Aranca la aplicación')
 
 })
-
-// Hoy no se pudo trabajar el API
 
