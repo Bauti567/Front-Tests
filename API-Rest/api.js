@@ -35,6 +35,11 @@ app.put('/:id', (req,res)=>{
     // Mostrando por consola los parametros de la URL
 })
 
+app.get('/:id', (req,res)=>{
+    console.log(req.params);
+    res.status(200).send(req.params);
+})
+
 app.patch('/:id', (req,res)=>{
     res.sendStatus(204);
 
@@ -49,3 +54,6 @@ app.listen(port, ()=>{
 
 })
 
+/// Un endpoint es una ruta con los verbos HTTP Get Post Put Delete
+// Podemos llamar a la misma ruta pero dependiento del verbo cambia la accion a ejecutar
+// listar crear actualizar o eliminar
