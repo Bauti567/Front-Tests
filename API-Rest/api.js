@@ -15,6 +15,16 @@ app.patch('/:id', user.update);
 app.delete('/:id', user.destroy);
 
 
+app.get('*', (req,res)=>{
+    res.status(404).send('Esta pagina no sirve');
+
+});
+
+app.post('*', (req,res)=>{
+    res.status(404).send('Esta pagina no sirve');
+
+});
+
 app.listen(port, ()=>{
     console.log('Arrancando al app')
 })
