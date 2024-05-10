@@ -1,11 +1,14 @@
 // Creando mi primera API
 const express = require('express') // Asignacion de Framework
+const mongoose = require('mongoose')
 const user = require('./user.Controller');
-
 const app = express()
 const port = 3000
-// Un endpoint 
+mongoose.connect('mongodb+srv://PracticaJuan:3229282156@cluster0.tfqechz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 
+// Definiendo modelo de usuario
+
+// Un endpoint 
 app.get('/', user.list);
 app.post('/', user.create);
 

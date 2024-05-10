@@ -1,18 +1,22 @@
+const Users = require('./user') // IMPORTANDO EL MODELO USUARIO
+
 const User = {
-    get: (req,res)=>{
+    get: async(req,res)=>{
         res.status(200).send('Este es un usuario');
     },
-    list: (req,res) =>{
-        res.status(200).send('Hola API');
+    list: async (req,res) =>{
+        const users = await Users.find()
+        res.status(200).send(users);
 
     },
-    create: (req,res)=>{
+    create: async(req,res)=>{
+        console.log(req.body)
         res.status(201).send('Creando un user')
     },
-    update: (req,res)=>{
+    update: async(req,res)=>{
         res.status(204).send('Actualizando user')
     },
-    destroy: (req,res)=>{
+    destroy: async(req,res)=>{
         res.status(204).send('Eliminando usuario')
 
     }
