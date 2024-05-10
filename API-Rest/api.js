@@ -4,6 +4,11 @@ const mongoose = require('mongoose')
 const user = require('./user.Controller');
 const app = express()
 const port = 3000
+
+
+app.use(express.json()) // Toma todas las perticiones y las transforma a JS
+
+// Un midleware
 mongoose.connect('mongodb+srv://PracticaJuan:3229282156@cluster0.tfqechz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 
 // Definiendo modelo de usuario
@@ -12,7 +17,7 @@ mongoose.connect('mongodb+srv://PracticaJuan:3229282156@cluster0.tfqechz.mongodb
 app.get('/', user.list);
 app.post('/', user.create);
 
-app.get('/id:', user.get);
+app.get('/:id', user.get);
 app.put('/:id', user.update);
 app.patch('/:id', user.update);
 app.delete('/:id', user.destroy);
