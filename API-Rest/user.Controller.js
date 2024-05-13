@@ -2,6 +2,7 @@ const Users = require('./user') // IMPORTANDO EL MODELO USUARIO
 
 const User = {
 
+    
     get: async(req,res)=>{
         const { id } = req.params
         const user = await Users.findOne({_id:id})
