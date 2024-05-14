@@ -27,7 +27,7 @@ const User = {
     update: async (req, res) => {
         const { id } = req.params;
         try {
-            const user = await User.findOneAndUpdate({ _id: id }, req.body, { new: true });
+            const user = await Users.findOneAndUpdate({ _id: id }, req.body, { new: true });
             if (!user) {
                 return res.status(404).send('Usuario no encontrado');
             }
@@ -37,6 +37,8 @@ const User = {
             res.status(500).send('Error del servidor');
         }
     },
+    
+    
     destroy: async(req,res)=>{
         res.status(204).send('Eliminando usuario')
 
