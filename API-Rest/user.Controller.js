@@ -24,13 +24,18 @@ const User = {
         
     },
     
-    update: async(req,res)=>{
+    update: async (req, res) => {
         const { id } = req.params;
-        const user = await Users.findOne({ _id : id})
-        Object.assign(user, req.body)
-        await user.save()
-        res.status(204).send('Actualizando user')
-    
+        try {
+            const user = await User.findOneAndUpdate({ _id: id }, req.body, { new: true });
+            if (!user) {
+                return res.status(404).send('Usuario no encontrado');
+            }
+            res.sendStatus(204);
+        } catch (error) {
+            console.error('Error al actualizar usuario:', error);
+            res.status(500).send('Error del servidor');
+        }
     },
     destroy: async(req,res)=>{
         res.status(204).send('Eliminando usuario')
