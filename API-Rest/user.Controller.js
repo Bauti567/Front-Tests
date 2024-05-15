@@ -1,7 +1,6 @@
 const Users = require('./user') // IMPORTANDO EL MODELO USUARIO
 
 const User = {
-
     
     get: async(req,res)=>{
         const { id } = req.params

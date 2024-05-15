@@ -11,17 +11,22 @@ app.use(express.json()) // Toma todas las perticiones y las transforma a JS
 // Un midleware
 mongoose.connect('mongodb+srv://PracticaJuan:3229282156@cluster0.tfqechz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 
-// Definiendo modelo de usuario
-
 // Un endpoint 
-app.get('/', user.list);
-app.post('/', user.create);
+app.get('/users', user.list);
+app.post('/users', user.create);
 
-app.get('/:id', user.get);
-app.put('/:id', user.update);
-app.patch('/:id', user.update);
-app.delete('/:id', user.destroy);
+app.get('/users/:id', user.get);
+app.put('/users/:id', user.update);
+app.patch('/users/:id', user.update);
+app.delete('/users/:id', user.destroy);
 
+app.use(express.static('app'))
+
+app.get('/',(req,res)=>{
+    console.log(__dirname)
+    res.sendFile(`${__dirname}/index.html`);
+
+})
 
 
 app.get('*', (req,res)=>{
