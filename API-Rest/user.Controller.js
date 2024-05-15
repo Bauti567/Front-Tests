@@ -39,10 +39,21 @@ const User = {
     },
     
     
-    destroy: async(req,res)=>{
-        res.status(204).send('Eliminando usuario')
-
+    destroy: async (req, res) => {
+        const { id } = req.params;
+        try {
+            const user = await Users.findOne({ _id: id });
+            if (!user) {
+                return res.status(404).send('Usuario no encontrado');
+            }
+            await user.remove();
+            res.sendStatus(204);
+        } catch (error) {
+            console.error('Error al eliminar usuario:', error);
+            res.status(500).send('Error del servidor');
+        }
     }
+    
 }
 
 module.exports = User // Al momento de importar el archivo 
