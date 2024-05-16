@@ -1,5 +1,6 @@
 // Este es el punto de inicio de mi app
 const express = require('express')
+const mongoose = require('mongoose')
 const path = require('path')
 
 const app = express();
@@ -15,6 +16,10 @@ app.use(express.static(path.join(__dirname, 'routes')))
 app.get('/', (req,res)=>{
     res.sendFile(path.join(__dirname, 'routes','index.html'))
 })
+
+
+// Endpoints
+
 
 
 
