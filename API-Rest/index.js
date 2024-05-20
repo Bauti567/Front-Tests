@@ -8,7 +8,7 @@ mongoose.connect('mongodb+srv://PracticaJuan:3229282156@cluster0.tfqechz.mongodb
 const User = mongoose.model('User',{
     userName: String,
     edad: Number,
-
+    
 })
 
 // Funcion asyncrona para conectar
