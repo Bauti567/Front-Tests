@@ -2,6 +2,7 @@
 //Simplemente es un objeto para almacenamiento de datos
 import mongoose from "mongoose";
 
+// Esquema para almacenamiento
 const userSchema = mongoose.Schema({
     userName:{
         type: String,

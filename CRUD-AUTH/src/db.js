@@ -1,9 +1,8 @@
 // Conexion con la base de datos
-
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 // Conexion con la base de datos
-const connectDB = async ()=>{
+export const connectDB = async ()=>{
     try{
         await mongoose.connect('mongodb+srv://JuanBautista:80274331Juan@atlascluster.lazttss.mongodb.net/authApp?retryWrites=true&w=majority&appName=AtlasCluster')
         console.log('DB is conected!')
@@ -13,4 +12,4 @@ const connectDB = async ()=>{
     }
 }
 
-module.exports = connectDB;
+export default connectDB;

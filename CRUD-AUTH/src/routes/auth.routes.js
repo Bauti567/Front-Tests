@@ -1,7 +1,7 @@
-// Este archivo se define para 
+// Este archivo se define para las rutas de mi app
 
-import {Router} from express;
-import { login, register } from "../controllers/auth.controllers";
+import { Router } from "express";
+import { login, register } from '../controllers/auth.controllers.js';
 
 const router = Router()
 
@@ -9,4 +9,4 @@ router.post('/register', register)
 router.post('/login', login)
 
 
-export default router
+export default router;

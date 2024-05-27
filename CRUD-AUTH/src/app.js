@@ -1,9 +1,12 @@
-const express = require('express') // Asignacion de Framework
-const morgan = require('morgan')
+import express from "express";
+import morgan from "morgan";
+import authRoutes from "./routes/auth.routes.js"
+
 
 const app = express();
 app.use(morgan('dev'));
 
+app.use(authRoutes)
 
-module.exports = app;
+export default app;
 
