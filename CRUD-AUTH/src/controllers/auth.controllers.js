@@ -1,7 +1,8 @@
 // En este archivo se procesan las peticiones de la URL
 
 export const register = (req,res)=>{
-    res.send('register')
+    console.log(req.body)
+    res.send('registrando')
 }
 
 export const login = (req,res)=>{
