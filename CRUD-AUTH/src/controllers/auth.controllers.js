@@ -9,7 +9,8 @@ export const register = async (req,res)=>{
             username,
             email,
             password
-        })    
+        }) 
+           
         await newUser.save()
         res.send('registrando')
 
