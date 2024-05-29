@@ -3,7 +3,7 @@
 import mongoose from "mongoose";
 
 // Esquema para almacenamiento
-const userSchema = mongoose.Schema({
+const userSchema = new mongoose.Schema({
     userName:{
         type: String,
         required: true,
