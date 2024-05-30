@@ -4,11 +4,6 @@ import mongoose from "mongoose";
 
 // Esquema para almacenamiento
 const userSchema = new mongoose.Schema({
-    userName:{
-        type: String,
-        required: true,
-        trim: true
-    },
     email:{
         type: String,
         required: true,
@@ -19,8 +14,16 @@ const userSchema = new mongoose.Schema({
     password:{
         type: String,
         required: true
-    }
+    },
+    userName:{
+        type: String,
+        required: true,
+    },
+},{
+    timestamps: true
 })
 
-export default mongoose.model('User', userSchema)
+const User = mongoose.model('User', userSchema)
+
+export default User;
 
