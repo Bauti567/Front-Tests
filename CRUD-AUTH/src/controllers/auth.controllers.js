@@ -1,32 +1,25 @@
-// En este archivo se procesan las peticiones de la URL
 import User from '../models/userModel.js'
+import bcrypt from 'bcryptjs'
 
-export const register = async (req,res)=>{
-    const {email, password, username} = req.body
+export const register = async (req, res) => {
+    const { email, password, username } = req.body;
     
-    // Creando un nuevo usuario
-    try{
+    try {
         const newUser = new User({
             userName: username,
             email,
             password
         });
-           
-        const userSaved = await newUser.save()
-        res.json(userSaved)
-
-        res.status(200).send('registrando')
-
-    } catch (error){
-        console.log('No se pudo registrar el usuario',error)
-        res.status(400).send('Error al registrar el usuario');
         
+        const userSaved = await newUser.save();
+        return res.json(userSaved);  // Aquí enviamos la respuesta y terminamos la ejecución
+
+    } catch (error) {
+        console.log('No se pudo registrar el usuario', error);
+        return res.status(400).send('Error al registrar el usuario'); // Usamos return para terminar la ejecución aquí también
     }
-
-
-    
 }
 
-export const login = (req,res)=>{
-    res.send('Login')
+export const login = (req, res) => {
+    res.send('Login');
 }
