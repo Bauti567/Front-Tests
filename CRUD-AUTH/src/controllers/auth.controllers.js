@@ -1,7 +1,6 @@
 import User from '../models/userModel.js'
 import bcrypt from 'bcryptjs'
-import jwt from 'jsonwebtoken'
-import { token } from 'morgan';
+import { createAccessToken } from '../libs/jwt.js';
 
 export const register = async (req, res) => {
     const { email, password, username } = req.body;   
@@ -18,8 +17,8 @@ export const register = async (req, res) => {
         
 
         const userSaved = await newUser.save();
-        
-
+        const token = await createAccessToken({id: userSaved._id})
+        res.cookie('token', token)
         return res.json({
             id: userSaved.id,
             username: userSaved.userName,
@@ -35,5 +34,7 @@ export const register = async (req, res) => {
 }
 
 export const login = (req, res) => {
+    console.log('INICIAMOS CON EL LOGIN')
     res.send('Login');
+
 }

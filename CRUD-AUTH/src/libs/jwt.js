@@ -1,18 +1,24 @@
-import {TOKEN_SECRET} from '../config.js'
+import { TOKEN_SECRET } from '../config.js'
+import jwt from 'jsonwebtoken'; // Importa jwt y JsonWebTokenError juntos
 
-function createAccesToken(payload) {
-    jwt.sign({
-        payload,
-        TOKEN_SECRET
-    },
-    {
-        expiresIn:"1d",
-    },(err,token)=>{
-        if (err) console.log(err);
-            res.cookie('token', token)
-            res.json({
-                message: "User created succesfuly"
-            })
 
-    });
-}
+export const createAccessToken = async (user) => {
+    try {
+        const token = await new Promise((resolve, reject) => {
+            jwt.sign(
+                { id: user._id },
+                TOKEN_SECRET, // Debes reemplazar esto con tu clave secreta
+                { expiresIn: '1h' },
+                (err, token) => {
+                    if (err) {
+                        reject(new JsonWebTokenError(err.message));
+                    }
+                    resolve(token);
+                }
+            );
+        });
+        return token;
+    } catch (error) {
+        throw new JsonWebTokenError(error.message);
+    }
+};
