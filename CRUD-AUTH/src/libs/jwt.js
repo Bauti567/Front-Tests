@@ -6,7 +6,7 @@ export const createAccessToken = async (user) => {
     try {
         const token = await new Promise((resolve, reject) => {
             jwt.sign(
-                { id: user._id },
+                { id: user.id },
                 TOKEN_SECRET, // Debes reemplazar esto con tu clave secreta
                 { expiresIn: '1h' },
                 (err, token) => {
