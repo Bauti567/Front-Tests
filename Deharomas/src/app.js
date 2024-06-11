@@ -6,5 +6,5 @@ const app = express()
 const PORT = 4000
 
 app.listen(PORT,()=>{
-    console.log('App running')
+    console.log('Backend deharomas is running')
 })
