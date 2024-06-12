@@ -1,0 +1,32 @@
+
+/* Contenedor del formulario */
+.container-form {
+    background-color: red;
+    padding: 40px;
+    width: 60%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar los elementos dentro del contenedor */
+    border-radius: 10px;
+}
+
+/* Estilo de los inputs */
+.container-input {
+    width: 100%;
+    margin: 10px 0; /* Margen vertical */
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box; /* Para que el padding no afecte al ancho */
+}
+
+/* Botón */
+.container-button {
+    background-color: #466362;
+    padding: 15px;
+    color: #fff;
+    border-radius: 10px;
+    border: none; /* Quitar borde por defecto del botón */
+    cursor: pointer; /* Mostrar cursor de mano al pasar sobre el botón */
+    margin-top: 20px; /* Separación del botón respecto a los inputs */
+}
