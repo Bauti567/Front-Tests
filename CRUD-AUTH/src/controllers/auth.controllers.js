@@ -7,6 +7,11 @@ export const register = async (req, res) => {
     
     try {
         // Encriptado de contraseña
+        const userFound = await User.findOne({email})
+        if(userFound){
+            return res.status(400).json(["Este correo ya existe"])
+        }
+
         const passwordHash = await bcrypt.hash(password, 10)
 
         const newUser = new User({
