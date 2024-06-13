@@ -1,9 +1,13 @@
 import React from 'react'
 
+
+import Footer from '../components/organisms/footer/footer'
+
 export default function LoginPage() {
   
   return (
     <>
+    <Header></Header>
     <div>loginPage con Routes</div>
     <h2>Este es el login</h2>
       <div className="container">
@@ -19,6 +23,7 @@ export default function LoginPage() {
           <button type="submit">Ingresar</button>
         </form>
       </div>
+      <Footer></Footer>
       </>
   )
 }
