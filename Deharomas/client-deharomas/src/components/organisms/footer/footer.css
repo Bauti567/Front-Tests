@@ -1,0 +1,93 @@
+/* footer.css */
+.footer-container {
+    width: 100%;
+    background-color: #245501;
+}
+
+.Footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.group-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0;
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+}
+
+.group-1 .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Mantener los otros elementos centrados */
+}
+
+.group-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.group-1 .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+    text-align: left; /* Alineación por defecto */
+    width: 100%; /* Asegura que el texto ocupe todo el ancho del contenedor */
+}
+
+.group-1 .box h2 .follow{
+    text-align: center;
+}
+
+
+.group-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+    text-align: left; /* Alineación por defecto */
+    width: 100%; /* Asegura que el texto ocupe todo el ancho del contenedor */
+}
+
+.group-1 .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaciado entre los iconos */
+}
+
+.group-1 .social-media a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background-color: #538d22;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.group-1 .social-media a:hover {
+    color: #0d2033;
+    background-color: #fff; /* Añadido para que el cambio de color de fondo sea visible */
+}
+
+.group-2 {
+    width: 100%;
+    background-color: #538d22;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+}
+
+.group-2 small {
+    font-size: 15px;
+}

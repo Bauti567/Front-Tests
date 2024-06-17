@@ -1,7 +1,5 @@
 import React from 'react'
-
-
-import Footer from '../components/organisms/footer/footer'
+import Footer from '../components/organisms/Footer/Footer'
 
 export default function LoginPage() {
   

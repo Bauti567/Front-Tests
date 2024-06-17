@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Header from '../components/organisms/Navbar/Navbar';
 
 export default function registerPage() {
   return (
