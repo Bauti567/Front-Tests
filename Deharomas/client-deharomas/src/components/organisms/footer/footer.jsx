@@ -20,7 +20,7 @@ export default function Footer() {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, in.</p>
           </div>
           <div className="box">
-            <h2>Síguenos</h2>
+            <h2 className='follow'>Síguenos</h2>
             <div className="social-media">
               <a href="#"><FaFacebookSquare /></a>
               <a href="#"><FaInstagram/></a>
