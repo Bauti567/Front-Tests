@@ -1,57 +1,44 @@
-import { createContext, useContext, useState } from "react";
-import { registerRequest, loginRequest } from '../api/auth.js'
-
+// El contexto actualiza los componentes hijos
+import { createContext, useState, useContext } from "react";
+import { registerRequest } from '../api/auth'
 
 const AuthContext = createContext()
 
-export const useAuth = () => {
+export const useAuth = () =>{
     const context = useContext(AuthContext)
-
     if(!context){
-        throw new Error("useAuth must be used within an Authprovider")
+        throw new Error ("useAuth must be within a AuthProvider")
     }
     return context;
-
 }
 
-export const AuthProvider = ({children})=>{
-    const [user,setUser] = useState()
-    const [isAuthenticated, setIsAunthenticated] = useState(false)
+
+export const AuthProvider = ({children}) => {
+    const [user,setUser] = useState(null)
+    const [isAuthenticated, setIsAuthenticated] = useState(false)
     const [errors, setErrors] = useState([])
 
     const signup = async (user) =>{
-        try{ 
+        try{
             const res = await registerRequest(user)
-            console.log(res.data)
+            console.log(res.data);
             setUser(res.data)
-            setIsAunthenticated(true)
-
-        } catch(error){
+            setIsAuthenticated(true)    
+        } catch (error){
             console.log(error.response)
             setErrors(error.response.data)
         }
-    }
 
-    const signin = async(user)=>{
-        try {
-            const res = await loginRequest(user)
-            console.log(res)
-        } catch (error) {
-            console.log(error)
-            setErrors(error.response.data)
-        }
     }
 
     return(
-        <AuthContext.Provider 
-        value={{
+        <AuthContext.Provider value={{
             signup,
-            signin,
             user,
             isAuthenticated,
             errors
         }}>
-            {children}
+            {children} 
         </AuthContext.Provider>
     )
 }

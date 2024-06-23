@@ -11,7 +11,8 @@ const app = express();
 app.use(express.json())
 app.use(morgan('dev'));
 app.use(cookieParser());
-app.use(cors({ // Solo este dominio se puede comunicar con el back
+app.use(cors({ 
+    // Solo este dominio se puede comunicar con el back
     origin: 'http://localhost:5173',
 }))
 

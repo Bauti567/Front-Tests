@@ -9,6 +9,7 @@ function App() {
   const [count, setCount] = useState(0)
   
   return (
+    // El authprovider es para el contexto de la aplicacion
     <AuthProvider>
       <BrowserRouter>
         <Routes>
