@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter, Router, Routes, Route } from 'react-router-dom'
 import LoginPage from './pages/LoginPage'; // Importa LoginPage como default import
-import RegisterPage from './pages/registerPage';
+import RegisterPage from './pages/RegisterPage';
 import HomePage from './pages/HomePage';
 
 import './index.css'

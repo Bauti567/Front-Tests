@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Asegúrate de que el body ocupe toda la pantalla y tenga un fondo */
 body, html {
     height: 100%;
     margin: 0;
