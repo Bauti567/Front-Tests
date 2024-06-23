@@ -1,3 +1,4 @@
+// Axios permite la conexión entre el front-end y back-end
 import axios from 'axios'
 
 const API = 'http://localhost:3000/api'
