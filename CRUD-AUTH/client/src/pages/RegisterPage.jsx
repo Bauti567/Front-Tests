@@ -58,6 +58,8 @@ export default function RegisterPage() {
         }
         <button className='container-button' type="submit">Register</button>
       </form>
+      <p className='flex gap-x-2 justify-between'>No tienes una cuenta todavía? <Link to="/login" className='text-sky-500'>Inicia sesión</Link></p>
+
     </div>
   )
 } 
