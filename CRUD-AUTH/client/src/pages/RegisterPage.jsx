@@ -4,7 +4,7 @@ import { useAuth } from '../context/AuthContext'
 import { registerRequest } from '../api/auth'
 import { useNavigate } from 'react-router-dom'
 import '../api/auth'
-import './register.css'
+import './styles.css'
 
 export default function RegisterPage() {
   // Funcion para mostrar por consola

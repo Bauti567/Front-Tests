@@ -1,29 +1,39 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { useAuth } from '../context/AuthContext'
+import './styles.css'
 
 export default function LoginPage() {
-  const { 
+  
+  const {
     register, 
-    handleSubmit,
-    formState: { errors }
-   } = useForm()
+    handleSubmit, 
+    formState: {errors
 
-   const {signin, errors: signinErrors } = useAuth()
+    }} = useForm()
 
-
-  const onSubmit = handleSubmit(data => {
+  const OnSubmit = handleSubmit((data)=>{
     console.log(data)
-    signin(data)
+  
   })
-  return (
-    <div>
-      <form onSubmit={onSubmit}>
-        <h1>Este es mi formulario de login</h1>
-        <input type="email" className='container-input' {...register('email', { required: true })} placeholder='E-mail' />
-        <input type="password" className='container-input' {...register('password', { required: true })} placeholder='Password' />
-        <button type="submit" className='container-button'>Ingresar</button>
 
+  return (
+    <div className='container-form'>
+      
+      <form onSubmit={OnSubmit}>
+        <input className='container-input' placeholder='email' type="email" name="email" {...register("email", {required:true})}/>
+        {
+          errors.email && (
+            <p className='text-white-500'>Email es requerido</p>
+          )
+        }
+        <input className='container-input' placeholder='password' type="password" name="username" {...register("password", {required:true})}/>        
+        {
+          errors.username && (
+            <p className='text-white-500'>Password es requerido</p>
+          )
+        }
+        <button className='container-button' type="submit">Register</button>
       </form>
     </div>
   )
