@@ -54,6 +54,9 @@ export const AuthProvider = ({children}) => {
         }
     },[errors])
 
+
+
+
     return(
         <AuthContext.Provider value={{
             signup,
