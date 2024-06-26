@@ -2,14 +2,15 @@ import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { useAuth } from '../context/AuthContext'
 import { registerRequest } from '../api/auth'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import '../api/auth'
 import './styles.css'
 
 export default function RegisterPage() {
   // Funcion para mostrar por consola
 
-  const {register, 
+  const {
+    register, 
     handleSubmit, 
     formState: {errors}
   
