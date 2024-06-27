@@ -4,10 +4,11 @@ import { useAuth } from './context/AuthContext'
 import React from 'react'
 
 export default function ProtectedRoutes() {
-    const {user, isAuthenticated} = useAuth()
-    console.log(user, isAuthenticated)
+    const {loading, isAuthenticated} = useAuth()
+    console.log(loading, isAuthenticated)
 
-    if(!isAuthenticated) return <Navigate to='/login' replace />
+    if(loading) return <h1>Loading...</h1>
+    if(loading && !isAuthenticated) return <Navigate to='/login' replace />
 
     return  <Outlet/>;
 
