@@ -14,6 +14,7 @@ app.use(cookieParser());
 app.use(cors({ 
     // Solo este dominio se puede comunicar con el back
     origin: 'http://localhost:5173',
+    credentials: true // permite compartir los headers
 }))
 
 
