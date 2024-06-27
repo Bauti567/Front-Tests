@@ -1,4 +1,5 @@
 import React from 'react'
+import {useForm} from 'react-hook-form'
 
 export default function TasksPage() {
 
@@ -6,6 +7,10 @@ export default function TasksPage() {
   
 
   return (
-    <div>TasksPage</div>
+    <div>
+      <form action="">
+        <input type="text" name="" id="" placeholder='title'/>
+      </form>
+    </div>
   )
 }
