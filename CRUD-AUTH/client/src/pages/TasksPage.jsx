@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {useForm} from 'react-hook-form'
 
 export default function TasksPage() {
 
   // Comprobando si existe una cookie antes de ingresar
-  
+
+  const [user,setUser] = useState
+
+
+
 
   return (
     <div>
@@ -14,3 +18,7 @@ export default function TasksPage() {
     </div>
   )
 }
+
+
+
+

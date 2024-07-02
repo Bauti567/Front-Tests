@@ -30,3 +30,8 @@
     cursor: pointer; /* Mostrar cursor de mano al pasar sobre el botón */
     margin-top: 20px; /* Separación del botón respecto a los inputs */
 }
+
+
+.container{
+    background-color: red;
+}
