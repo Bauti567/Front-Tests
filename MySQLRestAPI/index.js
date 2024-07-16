@@ -11,9 +11,6 @@ app.put('/employees',(req,res)=>{res.send('Actualizando empleados')})
 app.delete('/employees',(req,res)=>{res.send('Eliminando empleados')})
 
 
-
-
-
 app.listen(PORT)
 console.log('App is working on ',PORT)
 
