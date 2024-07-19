@@ -11,6 +11,3 @@ export const pool = createPool({
     database: 'companydb'    
 })
 
-
-// El query permite generar consultas SQL
-pool.query()
