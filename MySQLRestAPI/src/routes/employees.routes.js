@@ -1,11 +1,7 @@
-import express from 'express'
-import { pool } from './db.js'
+// this is my routes file
+import { Router } from "express";
 
-const app = express()
-const PORT = 3000
-
-
-// Routes
+const router = Router()
 
 app.get('/ping',async(req,res)=>{
     const result = await pool.query('SELECT "Pong" AS result')
@@ -18,8 +14,6 @@ app.put('/employees',(req,res)=>{res.send('Actualizando empleados')})
 app.delete('/employees',(req,res)=>{res.send('Eliminando empleados')})
 
 
-app.listen(PORT)
-console.log('App is working on ',PORT)
 
 
-
+export default router;
