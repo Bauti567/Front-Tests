@@ -3,11 +3,18 @@ import { createPool } from "mysql2/promise";
 
 
 // Parámetros de conexión
+
 export const pool = createPool({
-    host: 'localhost', //-------- Aquí iría una IP ---------
+    //-------- Aquí iría una IP ---------
+    host: 'localhost', 
     user: 'root',
     password: 'JuanDev*$1',
     port: 3306,
-    database: 'companydb'    
+    database: 'companydb'  
+
 })
+
+
+
+
 

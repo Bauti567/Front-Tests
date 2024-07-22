@@ -1,5 +1,5 @@
 import express from 'express'
-import {pool} from './db.js'
+import { pool } from './db.js'
 
 const app = express()
 const PORT = 3000
@@ -7,8 +7,8 @@ const PORT = 3000
 
 // Routes
 
-app.get('/ping', async(req,res)=>{
-    const [result] = await pool.query('SELECT ')
+app.get('/ping',async(req,res)=>{
+    const result = await pool.query('SELECT "Pong" AS result')
     res.json(result[0])
 })
 
