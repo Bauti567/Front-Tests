@@ -1,6 +1,13 @@
-// Rutas de mi aplicación
+// Rutas de admin
 import { Router } from "express";
 
-app.get('/',(req,res)=>{
-    res.send('La ruta principal')
+const router = Router();
+
+router.get('/admin/dashboard',(req,res)=>{
+    res.json('Panel de administracion')
+
 })
+
+
+
+export default router;
