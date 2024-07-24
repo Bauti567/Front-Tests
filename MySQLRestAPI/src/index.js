@@ -10,7 +10,7 @@ app.use(express.json())
 
 // Routes
 
-app.use(employeesRoutes)
+app.use('/api',employeesRoutes)
 app.use(indexRoutes)
 
 

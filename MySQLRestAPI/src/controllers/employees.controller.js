@@ -2,9 +2,21 @@
 import { pool } from "../db.js"
 
 
-export const getEmployees = (req,res)=>{
-    res.send('Obteniendo empleados')
+export const getEmployees = async (req,res)=>{
+    const [rows] =  await pool.query('SELECT * FROM employee ')
+    res.json(rows)
+
 }
+
+export const getEmployee = async (req,res)=>{
+    console.log(req.params)
+    
+    const [rows] = await pool.query('SELECT * FROM employee WHERE id = ?',[req.params.id])
+    console.log(rows)
+    res.json(rows[0])
+
+}
+
 
 export const createEmployee = async (req,res)=>{
     //console.log(req.body) // ver los datos enviados
