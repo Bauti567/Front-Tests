@@ -1,13 +1,14 @@
 // this is my routes file
 import { Router } from "express";
+import { getEmployees, createEmployee, updataEmployee, deleteEmployee } from "../controllers/employees.controller.js";
 
 const router = Router()
 
 
-router.get('/employees',(req,res)=>{res.send('Obteniendo empleados')})
-router.post('/employees',(req,res)=>{res.send('Creando empleados')})
-router.put('/employees',(req,res)=>{res.send('Actualizando empleados')})
-router.delete('/employees',(req,res)=>{res.send('Eliminando empleados')})
+router.get('/employees', getEmployees)
+router.post('/employees', createEmployee)
+router.put('/employees', updataEmployee)
+router.delete('/employees', deleteEmployee)
 
 
 
