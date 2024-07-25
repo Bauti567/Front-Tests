@@ -1,16 +1,16 @@
 import React from 'react'
+import './stylesPage.css'
 import Footer from '../components/organisms/Footer/Footer'
+import Header from '../components/organisms/Navbar/Navbar'
 
 export default function LoginPage() {
   
   return (
     <>
-    <Header></Header>
     <div>loginPage con Routes</div>
     <h2>Este es el login</h2>
       <div className="container">
         <div className="container-logo">
-          <label htmlFor="">Aqui va la imagen</label>
           <img src="" alt="" />
         </div>
         <form action="">
@@ -21,7 +21,6 @@ export default function LoginPage() {
           <button type="submit">Ingresar</button>
         </form>
       </div>
-      <Footer></Footer>
       
       </>
   )
