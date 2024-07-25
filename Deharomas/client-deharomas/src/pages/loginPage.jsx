@@ -22,6 +22,7 @@ export default function LoginPage() {
         </form>
       </div>
       <Footer></Footer>
+      
       </>
   )
 }

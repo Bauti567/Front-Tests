@@ -8,6 +8,7 @@ const PORT = 3000
 
 app.use(express.json())
 
+
 // Routes
 
 app.use('/api',employeesRoutes)
