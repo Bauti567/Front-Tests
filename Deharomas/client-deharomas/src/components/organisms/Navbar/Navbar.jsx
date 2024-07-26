@@ -4,7 +4,7 @@ import './navbar.css'
 
 
 
-export default function Header() {
+export default function Navbar() {
   
 
   return (

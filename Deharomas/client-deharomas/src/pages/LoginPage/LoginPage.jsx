@@ -1,13 +1,14 @@
-import React from 'react'
-import './stylesPage.css'
-import Footer from '../components/organisms/Footer/Footer'
-import Header from '../components/organisms/Navbar/Navbar'
+import React, { useState } from 'react'
+import './stylesLogin.css'
 
 export default function LoginPage() {
   
+  const [status,SetStatus] = useState()
+  
   return (
+
     <>
-    <div>loginPage con Routes</div>
+    <div className='login-page'>loginPage con Routes
     <h2>Este es el login</h2>
       <div className="container">
         <div className="container-logo">
@@ -20,6 +21,7 @@ export default function LoginPage() {
           <input type="password" name="" id="" />
           <button type="submit">Ingresar</button>
         </form>
+      </div>
       </div>
       
       </>

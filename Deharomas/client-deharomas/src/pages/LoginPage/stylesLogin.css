@@ -1,0 +1,49 @@
+/* stylesPage.css */
+.login-page {
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Hace que ocupe toda la altura de la pantalla */
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Ancho máximo para la tarjeta */
+}
+
+.card img {
+  display: block;
+  margin: 0 auto 20px; /* Centra la imagen y agrega margen inferior */
+}
+
+.card label {
+  display: block;
+  margin-bottom: 8px; /* Espacio entre el label y el input */
+}
+
+.card input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px; /* Espacio inferior entre inputs */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.card button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #45a049; /* Color más oscuro al pasar el mouse */
+}
