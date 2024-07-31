@@ -1,17 +1,9 @@
-// Aqui se inicializa mi app ;)
-import express from 'express'
-import indexRoutes from './routes/index.routes.js'
+import app from './app.js'
 
-
-const app = express()
 const PORT = 4000
 
-// Rutas base 
-app.use(indexRoutes)
-
-
-
 app.listen(PORT,()=>{
-    console.log('Server is running on PORT',PORT)
+    console.log('App on port', PORT)
 
 })
+
