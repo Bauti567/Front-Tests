@@ -1,6 +1,10 @@
 export const Register = (req,res)=>{
+    
+    const { email,password,username } = req.body
+
+    res.send('Resgistrando')
     console.log(req.body)
-    res.send('REGISTRANDO')
+
 }
 
 export const Login = (req,res)=>{
