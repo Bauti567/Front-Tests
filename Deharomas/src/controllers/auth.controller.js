@@ -1,11 +1,15 @@
-export const Register = (req,res)=>{
-    
-    const { email,password,username } = req.body
+import { pool } from "../db.js"
 
-    res.send('Resgistrando')
-    console.log(req.body)
+export const Register = async(req,res)=>{
+    const { email,password,usearname } = req.body
+    const [rows] = await pool.query('INSERT INTO') 
+    res.send({
+        id
+    })
+    
 
 }
+
 
 export const Login = (req,res)=>{
    res.send('Login page') 
