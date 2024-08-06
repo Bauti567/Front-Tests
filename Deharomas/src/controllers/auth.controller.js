@@ -4,7 +4,10 @@ export const Register = async(req,res)=>{
     const { email,password,usearname } = req.body
     const [rows] = await pool.query('INSERT INTO') 
     res.send({
-        id
+        id: rows.insertId,
+        email,
+        password,
+        usearname
     })
     
 
