@@ -13,7 +13,9 @@ export const Register = async(req,res)=>{
 
 }
 
+
 export const Login = async(req,res)=>{
    const {email,password} = req.body
    const [rows] = await pool.query('Select FROM')
+
 }
