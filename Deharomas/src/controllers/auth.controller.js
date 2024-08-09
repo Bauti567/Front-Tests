@@ -13,8 +13,7 @@ export const Register = async(req,res)=>{
 
 }
 
-
-export const Login = (req,res)=>{
-   res.send('Login page') 
-
+export const Login = async(req,res)=>{
+   const {email,password} = req.body
+   const [rows] = await pool.query('Select FROM')
 }
