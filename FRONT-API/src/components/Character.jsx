@@ -1,10 +1,14 @@
-import React from 'react'
-im
+import React from "react";
 
-function Character() {
+function Character({ character }) {
   return (
-    <div>Personaje</div>
-  )
+    <div>
+      <h2>{character.name}</h2>
+      <p>{character.species}</p>
+      <p>{character.gender}</p>
+      <img src={character.image} alt={character.name} />
+    </div>
+  );
 }
 
 export default Character;
