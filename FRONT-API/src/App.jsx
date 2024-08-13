@@ -1,9 +1,16 @@
 import React from 'react'
+import { useEffect,useState } from 'react';
+import CharacterList from './components/CharacterList';
+
 
 function App() {
+  
   return (
-    <div>Conexion con API de Rick</div>
-    
+    <div>
+      <h1>Conexion con API</h1>
+      <CharacterList></CharacterList>
+    </div>
+
   )
 }
 
