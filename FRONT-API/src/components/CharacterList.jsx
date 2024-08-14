@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Character from "./Character";
 
+
 function CharacterList() {
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);

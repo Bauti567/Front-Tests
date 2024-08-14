@@ -1,13 +1,14 @@
 import React from 'react'
 
-function Cat() {
+function Cat({cats}) {
   return (
-    <div>
-        <h1>Titulo del card</h1>
-        <p>Nombre gato</p>
-        <img src="" alt="imagen gato" />
+    <div key={index}>
+      <p>{breed.name}</p>
+      <p>Temperamento: {breed.temperament}</p>
+      <img src={cat.url} alt="gato" width='300' />
     </div>
+    
   )
 }
 
-export default Cat
+export default Cat;

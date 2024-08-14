@@ -1,10 +1,13 @@
 import React from 'react'
 import { useEffect,useState } from 'react'
+import Cat from './Cat.jsx';
+import Button from './Button.jsx';
 
 function CatList() {
 
-  const[cats,setCats] = useState([])
-  const[loading,setLoading] = useState(true)
+  const[cats,setCats] = useState([]);
+  const[loading,setLoading] = useState(true);
+  const [currentIndex,setIndex] = useState(0);
 
   useEffect(()=>{
     async function fetchData(){
@@ -24,7 +27,7 @@ function CatList() {
       {
         cats.map(cat=>{
           return(
-            <div key={cat.id}>
+            <div>
               {cat.breeds.map((breed, index)=>(
                 <div key={index}>
                   <p>{breed.name}</p>
