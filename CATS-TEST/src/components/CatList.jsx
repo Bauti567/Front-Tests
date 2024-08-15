@@ -23,22 +23,18 @@ function CatList() {
   },[])
 
   return (
-    <div>
+    <div className='bg-danger'>
+      <div className="row">
       {
         cats.map(cat=>{
           return(
-            <div>
-              {cat.breeds.map((breed, index)=>(
-                <div key={index}>
-                  <p>{breed.name}</p>
-                  <p>Temperamento: {breed.temperament}</p>
-                </div>
-              ))}
-              <img src={cat.url} alt="gato" width='300' />
+            <div className="col-md-4">
+              <Cat cat={cat}></Cat>
             </div> 
           )
         })
       }
+      </div>
     </div>
   )
 
