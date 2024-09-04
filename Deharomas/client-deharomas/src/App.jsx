@@ -1,13 +1,12 @@
 import { useState } from 'react'
 import { BrowserRouter, Router, Routes, Route } from 'react-router-dom'
-import LoginPage from './pages/LoginPage/LoginPage'; // Importa LoginPage como default import
-import RegisterPage from './pages/RegisterPage';
 import HomePage from './pages/HomePage/HomePage';
+import LoginPage from './pages/LoginPage/LoginPage'
+import RegisterPage from './pages/RegisterPage/RegisterPage'
 
 import './index.css'
 
 function App() {
-
 
   return (
     <>
