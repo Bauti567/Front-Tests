@@ -3,6 +3,5 @@ import express from 'express'
 const PORT = 4000
 const app = express()
 
-app.listen(PORT,()=>{
-    console.log('App on port',PORT)
-})
+
+export default app;
