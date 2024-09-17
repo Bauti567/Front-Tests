@@ -19,7 +19,6 @@ function CatList() {
     }
     fetchData();
 
-
   },[])
 
   return (
