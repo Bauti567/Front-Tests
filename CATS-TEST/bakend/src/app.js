@@ -1,0 +1,7 @@
+// Arranque de la aplicacion
+
+import express from 'express'
+export const app = express()
+
+
+export default app;
