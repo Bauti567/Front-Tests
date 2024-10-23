@@ -1,1 +1,1 @@
-// Conexion con base de datos
+// configuracion de la base de datos
