@@ -1,6 +1,8 @@
 // Funciones que se ejecutan al entrar a la URL
 import User from '../models/user.model.js'
 import bcrypt from 'bcryptjs'
+import { createAccessToken } from '../libs/jwt.js'
+
 
 export const register = async(req,res)=>{
     const {username, email, password} = req.body
@@ -14,8 +16,8 @@ export const register = async(req,res)=>{
         })
 
         const UserSaved = await newUser.save()
-        res.status(200).send(UserSaved)
 
+        res.status(200).send(UserSaved)
 
     } catch (error) {
         console.log(error)
@@ -23,6 +25,7 @@ export const register = async(req,res)=>{
             message: error.message
         })
     }
+    
 }
 
 export const login = async (req,res)=>{
