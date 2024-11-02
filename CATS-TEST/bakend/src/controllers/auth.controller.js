@@ -33,7 +33,8 @@ export const register = async(req,res)=>{
 }
 
 export const login = async (req,res)=>{
-    const {email, password} = req.body
+    const {email, password} = req.body;
+
     try {
         // Buscando usuario
         const UserFound = await User.findOne({email})
@@ -46,6 +47,8 @@ export const login = async (req,res)=>{
             message: 'Invalid credentials'
         })
 
+        const token = await createAccessToken({id: UserFound._id })
+        res.cookie('token',token)
         res.json({
             id: UserFound._id,
             username: UserFound.username,
@@ -60,11 +63,17 @@ export const login = async (req,res)=>{
     }
 }
 
-export const logout = (req,res)=>{
-    res.send('logout')
+export const logout = async (req,res)=>{
+    res.cookie('token',"",{
+        expires: new Date(0)
+
+    })
+    return res.sendStatus(200)
 }
 
 export const profile = (req,res) =>{
+    // verificar usuario autenticado
+    
     res.send('profile')
 }
 
