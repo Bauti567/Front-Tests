@@ -9,8 +9,8 @@ router.post('/register',register)
 router.post('/login', login)
 router.post('/logout', logout)
 
-// authenticated profiles
 
+// authenticated profiles
 router.get('/profile',authRequired, profile)
 
 
