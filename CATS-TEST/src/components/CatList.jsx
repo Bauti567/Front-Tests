@@ -16,6 +16,7 @@ function CatList() {
       console.log(data)
       setCats(data)
 
+      
     }
     fetchData();
 
