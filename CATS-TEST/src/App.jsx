@@ -1,15 +1,21 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CatList from './components/CatList';
+import RegisterPage from './pages/RegisterPage';
+import LoginPage from './pages/LoginPage';
 
 
 function App() {
   return (
-    <div className='bg-dark text-white'>
-      <h1 className='text-center display-1 py-4'>Mi aplicacion de gatos</h1>
-      <CatList/>
-      
-    </div>
+    <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<h1>Home page</h1>}/>
+          <Route path='/login' element={<LoginPage/>}/>
+          <Route path='/register' element={<RegisterPage/>}/>
+          <Route path='/cat' element={<h1>cat</h1>}/>
+        </Routes>
+    </BrowserRouter>
   )
 }
 
