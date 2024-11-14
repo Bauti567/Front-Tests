@@ -2,19 +2,25 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import { useState, useEffect } from 'react';
 import { registerRequest } from '../api/auth';
+import { useAuth } from '../context/AuthContext';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 function RegisterPage() {
     const {register, handleSubmit} = useForm();
+    const {signup, isAuthenticated} = useAuth()
+    const navidegate = useNavigate();
+    
+    useEffect(()=>{
+      if(isAuthenticated) Navigate
+    },[isAuthenticated])
 
     const onSubmit = handleSubmit(async (values) =>{
-      // Cuando se ejecuta el form
-      // El register request es importado desde el auth
-      const res = await registerRequest(values)
-      console.log(res)
+      signup(values);
+
     })
 
-    
 
+    
   return (
     <form onSubmit={onSubmit}>
         <input type="text" className='input' placeholder='username' {...register("username", {required: true})}/>
