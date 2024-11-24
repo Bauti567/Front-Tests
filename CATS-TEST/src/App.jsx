@@ -1,7 +1,5 @@
 import React from 'react'
-import { useState,useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import CatList from './components/CatList';
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import { AuthProvider } from './context/AuthContext';
