@@ -1,20 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { registerRequest } from '../api/auth';
+import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 function RegisterPage() {
   const { register, handleSubmit } = useForm();
+  const {signup, isAuthenticated} = useAuth();
+
+  const navigate = useNavigate();
+
+  useEffect(()=>{
+    if(isAuthenticated) navigate('/tasks')
+  },[isAuthenticated])
+  // Registro de usuario 
+
+  const OnSubmit = handleSubmit(async(values) => {
+    
+  })
 
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
       <div className="card shadow-sm p-4" style={{ width: '400px' }}>
         <h2 className="text-center mb-4">Register</h2>
         <form
-          onSubmit={handleSubmit(async(values) => {
-            console.log(values);
-            const res = await registerRequest(values)
-            console.log(res)
-          })}
+          onSubmit={OnSubmit}
         >
           <div className="mb-3">
             <label htmlFor="username" className="form-label">Username</label>
