@@ -2,10 +2,12 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
+import { AuthProvider } from './context/AuthContext';
+
 
 function App() {
   return (
-    // El provider es el contexto 
+    // El provider es el contexto, para compartir datos desde cualquier nivel
     <AuthProvider>
       <BrowserRouter>
         <Routes>
@@ -16,6 +18,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </AuthProvider>
+
   )
 }
 

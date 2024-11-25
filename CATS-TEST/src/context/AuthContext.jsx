@@ -1,38 +1,46 @@
-import { Children, createContext, useContext } from "react";
-import { useState } from "react";
 import { registerRequest } from "../api/auth";
+import { createContext, useContext, useState } from "react";
 
-export const AuthContext = createContext()
+export const AuthContext = createContext();
 
-export const useAuth = () =>{
+export const useAuth = () => {
     const context = useContext(AuthContext)
     if(!context){
-        throw new Error("useAuth must be used within an authProvider")
+        throw new Error('useAuth must be used within an AuthProvider')
 
     }
+    return context;
 }
 
-const AuthProvider = ({children})=>{
-    const [user,setUser] = useState(null);
+export  const AuthProvider = ({children}) =>{
+    const[user,setUser] = useState(null)
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const[errors,setErrors] = useState([]);
 
     const signup = async(user) =>{
         try{
-            const res = await registerRequest(values)
-            console.log(res)
-            setUser(res.data)
-            setIsAuthenticated(true)
+            const res = await registerRequest(user)
+            console.log(res.data)
+            setUser(res.data);
+            setErrors([])
+            setIsAuthenticated(true);
+
         } catch(error){
-            console.log(error)
+            console.log(error.response)
+            setErrors(error.response.data)
         }
     }
+    
 
     return(
-        <AuthContext.Provider value={{
-            signup,
-            user,
-            isAuthenticated,
-        }}>
+        <AuthContext.Provider
+            value={{
+                signup,
+                user,
+                isAuthenticated,
+                errors
+            }}
+        >
             {children}
         </AuthContext.Provider>
     )
