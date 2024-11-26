@@ -1,5 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useAuth } from "../context/AuthContext";
+
 
 function LoginPage() {
   const {
@@ -8,8 +10,10 @@ function LoginPage() {
     formState: { errors },
   } = useForm();
 
+  const {signin} = useAuth(); 
+
   const OnSubmit = handleSubmit((data) => {
-    console.log(data);
+    signin(data);
   });
 
   return (

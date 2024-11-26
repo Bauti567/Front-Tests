@@ -1,47 +1,56 @@
-import { registerRequest } from "../api/auth";
+import { loginRequest, registerRequest } from "../api/auth";
 import { createContext, useContext, useState } from "react";
 
-export const AuthContext = createContext();
+const AuthContext = createContext();
 
-export const useAuth = () => {
-    const context = useContext(AuthContext)
-    if(!context){
-        throw new Error('useAuth must be used within an AuthProvider')
-
+const useAuth = () => {
+    const context = useContext(AuthContext);
+    if (!context) {
+        throw new Error('useAuth must be used within an AuthProvider');
     }
     return context;
-}
+};
 
-export  const AuthProvider = ({children}) =>{
-    const[user,setUser] = useState(null)
+const AuthProvider = ({ children }) => {
+    const [user, setUser] = useState(null);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
-    const[errors,setErrors] = useState([]);
+    const [errors, setErrors] = useState([]);
 
-    const signup = async(user) =>{
-        try{
-            const res = await registerRequest(user)
-            console.log(res.data)
+    const signup = async (user) => {
+        try {
+            const res = await registerRequest(user);
+            console.log(res.data);
             setUser(res.data);
-            setErrors([])
+            setErrors([]);
             setIsAuthenticated(true);
-
-        } catch(error){
-            console.log(error.response)
-            setErrors(error.response.data)
+        } catch (error) {
+            console.log(error.response);
+            setErrors(error.response.data);
         }
-    }
-    
+    };
 
-    return(
+    const signin = async (user) => {
+        try {
+            const res = await loginRequest(user);
+            console.log(res);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    return (
         <AuthContext.Provider
             value={{
                 signup,
+                signin,
                 user,
                 isAuthenticated,
-                errors
+                errors,
             }}
         >
             {children}
         </AuthContext.Provider>
-    )
-}
+    );
+};
+
+export { AuthContext, AuthProvider, useAuth };
