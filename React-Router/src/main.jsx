@@ -9,6 +9,7 @@ import ErrorPage from "./error-page";
 import Contact from "./routes/contact";
 import { Outlet } from "react-router-dom";
 import "./index.css";
+import Root, {loader as rootLoader} from "./routes/root";
 
 
 const router = createBrowserRouter([
