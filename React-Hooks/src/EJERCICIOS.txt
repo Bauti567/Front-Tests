@@ -1,0 +1,27 @@
+Aquí tienes una lista de 20 ejercicios prácticos en React enfocados en poner a prueba y fortalecer tu conocimiento sobre Hooks:
+
+Básicos:
+1).Contador con useState: Crea un contador que aumente, disminuya y reinicie su valor.
+2).Formulario controlado: Diseña un formulario que use useState para gestionar el nombre y el correo electrónico de un usuario.
+3).Mostrar/Ocultar componente: Usa useState para alternar la visibilidad de un componente al hacer clic en un botón.
+4).Lista dinámica: Implementa una lista en la que puedas agregar y eliminar elementos con useState.
+5).Cambio de tema: Usa useState para implementar un botón que alterne entre un tema claro y oscuro.
+Intermedios:
+1).Cronómetro con useEffect: Crea un cronómetro que comience, pause y reinicie usando useEffect para controlar los intervalos.
+2).Petición a una API: Usa useEffect para realizar una llamada a una API pública (como JSONPlaceholder) y mostrar los datos en pantalla.
+3).Persistencia con localStorage: Guarda el estado de un formulario en localStorage usando useEffect para cargarlo automáticamente al iniciar la aplicación.
+4)-Filtro dinámico: Crea una lista que se pueda filtrar en tiempo real al escribir en un campo de búsqueda.
+5.)Eventos del navegador: Usa useEffect para escuchar eventos del navegador, como el cambio de tamaño de la ventana, y muestra sus dimensiones.
+Avanzados:
+1).Context API con useContext: Implementa un sistema de autenticación falso que use el Context API para gestionar el estado global del usuario.
+2).Contador con useReducer: Crea un contador avanzado con múltiples operaciones (doblar, dividir, etc.) usando useReducer.
+3).Formulario avanzado con useReducer: Diseña un formulario complejo que use useReducer para manejar sus estados y validaciones.
+4).Custom Hook: Crea un custom hook llamado useFetch para realizar peticiones a una API de forma reutilizable.
+5).Control de inputs múltiples: Crea un formulario con múltiples campos dinámicos y gestiona su estado con un custom hook.
+Complejos:
+1).To-Do App: Diseña una aplicación de tareas donde puedas agregar, editar, eliminar y marcar tareas como completadas. Usa useState, useEffect y useReducer.
+2).Carrito de compras: Implementa un carrito de compras donde puedas agregar, actualizar y eliminar productos, usando Context y Reducer.
+3).Drag and Drop: Crea una lista de elementos que se puedan reordenar usando una librería como react-beautiful-dnd.
+4).Integración con Intersection Observer: Implementa un scroll infinito que cargue más datos cuando el usuario llegue al final de la página.
+5).WebSocket con useEffect: Diseña un chat básico que use WebSockets para enviar y recibir mensajes en tiempo real.
+6).Estos ejercicios cubren desde lo básico hasta desafíos más avanzados, permitiéndote profundizar en el uso de Hooks y consolidar tus conocimientos en React.
