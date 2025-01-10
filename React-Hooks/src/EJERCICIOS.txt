@@ -6,6 +6,7 @@ Básicos:
 2).Formulario controlado: Diseña un formulario que use useState para gestionar el nombre y el correo electrónico de un usuario.
 
 3).Mostrar/Ocultar componente: Usa useState para alternar la visibilidad de un componente al hacer clic en un botón.
+
 4).Lista dinámica: Implementa una lista en la que puedas agregar y eliminar elementos con useState.
 5).Cambio de tema: Usa useState para implementar un botón que alterne entre un tema claro y oscuro.
 Intermedios:
