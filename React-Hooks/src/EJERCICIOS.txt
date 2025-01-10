@@ -8,7 +8,9 @@ Básicos:
 3).Mostrar/Ocultar componente: Usa useState para alternar la visibilidad de un componente al hacer clic en un botón.
 
 4).Lista dinámica: Implementa una lista en la que puedas agregar y eliminar elementos con useState.
+
 5).Cambio de tema: Usa useState para implementar un botón que alterne entre un tema claro y oscuro.
+
 Intermedios:
 1).Cronómetro con useEffect: Crea un cronómetro que comience, pause y reinicie usando useEffect para controlar los intervalos.
 2).Petición a una API: Usa useEffect para realizar una llamada a una API pública (como JSONPlaceholder) y mostrar los datos en pantalla.

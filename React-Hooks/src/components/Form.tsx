@@ -1,3 +1,5 @@
+// Formulario controlado: Diseña un formulario que use useState para gestionar el nombre y el correo electrónico de un usuario.
+
 import React, { useState } from 'react';
 
 function Form() {

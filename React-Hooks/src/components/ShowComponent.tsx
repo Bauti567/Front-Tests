@@ -1,4 +1,7 @@
+// Mostrar/Ocultar componente: Usa useState para alternar la visibilidad de un componente al hacer clic en un botón.
+
 import React, { useState } from 'react'
+
 function ShowComponent() {
     const[active,setActive] = useState(false)
     
