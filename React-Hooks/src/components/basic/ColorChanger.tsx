@@ -1,29 +1,8 @@
-// import React, { useState } from 'react'
-
-
-// function Theme() {
-//     const[theme,setTheme] = useState(false)
-
-//     const ChangeTheme = ()=>{
-
-//     }
-//   return (
-//     <div>
-//         <h1>Aplicación que cambia de color</h1>
-//         <div className="theme">
-
-//         </div>
-//     </div>
-//   )
-// }
-
-// export default Theme;
-
 import React, { useState } from 'react';
 
 function ColorChanger() {
   // Estado para manejar el color
-  const [color, setColor] = useState('blue'); // Color inicial
+  const [color, setColor] = useState('red'); // Color inicial
 
   // Función para cambiar el color al hacer clic
   const toggleColor = () => {

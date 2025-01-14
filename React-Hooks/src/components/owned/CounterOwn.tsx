@@ -15,20 +15,20 @@ function CounterOwn() {
                 <div className="container-input">
                     <label htmlFor="">Número 1</label>
                     <input 
-                        type="number" 
-                        value={num1} 
+                        type="number"  
                         placeholder='Ingresa un número'
                         onChange={(e)=> setNum1(e.target.value)}
 
                     />
+
                     <label htmlFor="">Número 2</label>
                     <input 
                         type="number" 
-                        value={num2} 
                         placeholder='Ingresa un número'
                         onChange={(e)=> setNum2(e.target.value)} 
                     />
                 </div>
+
                 <button onClick={Sum}>Calcular número</button>
                 <div className="result">
                     <span>El resultado es:</span>
@@ -39,5 +39,6 @@ function CounterOwn() {
 
     )
 }
+
 
 export default CounterOwn;

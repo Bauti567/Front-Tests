@@ -12,7 +12,9 @@ Básicos:
 5).Cambio de tema: Usa useState para implementar un botón que alterne entre un tema claro y oscuro.
 
 Intermedios:
+
 1).Cronómetro con useEffect: Crea un cronómetro que comience, pause y reinicie usando useEffect para controlar los intervalos.
+
 2).Petición a una API: Usa useEffect para realizar una llamada a una API pública (como JSONPlaceholder) y mostrar los datos en pantalla.
 3).Persistencia con localStorage: Guarda el estado de un formulario en localStorage usando useEffect para cargarlo automáticamente al iniciar la aplicación.
 4)-Filtro dinámico: Crea una lista que se pueda filtrar en tiempo real al escribir en un campo de búsqueda.

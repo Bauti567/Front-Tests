@@ -6,10 +6,12 @@ import Form from './components/basic/Form.tsx'
 import ShowComponent from './components/basic/ShowComponent.tsx'
 import List from './components/basic/List.tsx'
 import CounterOwn from './components/owned/CounterOwn.tsx'
-import ColorChanger from './components/basic/Theme.tsx'
+import ColorChanger from './components/basic/ColorChanger.tsx'
+import ChangeTheme from './components/owned/ChangeTheme.tsx'
+
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ColorChanger/>
+    
   </StrictMode>,
 )
