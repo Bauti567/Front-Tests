@@ -8,10 +8,12 @@ import List from './components/basic/List.tsx'
 import CounterOwn from './components/owned/CounterOwn.tsx'
 import ColorChanger from './components/basic/ColorChanger.tsx'
 import ChangeTheme from './components/owned/ChangeTheme.tsx'
+import Cronometer from './components/intermediate/Cronometer.tsx'
+import FetchAPI from './components/intermediate/FetchAPI.tsx'
 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    
+    <FetchAPI/>
   </StrictMode>,
 )
