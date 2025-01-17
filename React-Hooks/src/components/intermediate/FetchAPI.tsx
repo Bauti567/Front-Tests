@@ -1,20 +1,40 @@
 // 2).Petición a una API: Usa useEffect para realizar una llamada a una API pública (como JSONPlaceholder) y mostrar los datos en pantalla.
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function FetchAPI() {
+    const [characters, setCharacters] = useState([]);
+    const [loading,setLoading] = useState(true);
+
     useEffect(()=>{
         async function FetchData() {
-                const data = await fetch("https://rickandmortyapi.com/api/character")
-                console.log(data)
+            const response = await fetch("https://rickandmortyapi.com/api/character")
+            const data = await response.json();
+            console.log(data)
+            setCharacters(data.results);
+
                 
         }
         FetchData();
-        
-    },[])
+    },[]);
+
   return (
     <div>
-        <h1>Ferch data</h1>
+        <h1>Fetch data</h1>
+        <div>
+            {
+                characters.map((character)=>{
+                    return(
+                        <div key={character.id}>
+                            <p>{character.name}</p>
+                            <p>{character.species}</p>
+                            <p>{character.gender}</p>
+                            <img src={character.image} alt="" />
+                        </div>
+                    )
+                })
+            }
+        </div>
     </div>
 
 )
