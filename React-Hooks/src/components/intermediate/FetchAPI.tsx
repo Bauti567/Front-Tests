@@ -2,8 +2,16 @@
 
 import React, { useEffect, useState } from 'react'
 
+type Character = {
+    id: number,
+    name: string,
+    species: string,
+    gender: string
+    image: string
+}
+
 function FetchAPI() {
-    const [characters, setCharacters] = useState([]);
+    const [characters, setCharacters] = useState<Character[]>([]);
     const [loading,setLoading] = useState(true);
 
     useEffect(()=>{
