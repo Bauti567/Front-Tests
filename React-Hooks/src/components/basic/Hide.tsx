@@ -6,7 +6,6 @@ function Hide() {
     const showComponent = ()=>{
         setHide(!hide)
     }
-
     return (
     <div>
         <h1>Esconder o mostrar componente</h1>

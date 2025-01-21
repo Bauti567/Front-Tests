@@ -10,11 +10,11 @@ import ColorChanger from './components/basic/ColorChanger.tsx'
 import ChangeTheme from './components/owned/ChangeTheme.tsx'
 import Cronometer from './components/intermediate/Cronometer.tsx'
 import FetchAPI from './components/intermediate/FetchAPI.tsx'
-// import Form from './components/intermediate/Form.tsx'
+import Form from './components/intermediate/Form.tsx'
 import Hide from './components/basic/Hide.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Hide/>
+    <Form/>
   </StrictMode>,
 )

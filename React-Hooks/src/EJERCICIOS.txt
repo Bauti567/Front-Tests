@@ -25,6 +25,7 @@ Intermedios:
 Avanzados:
 
 1).Context API con useContext: Implementa un sistema de autenticación falso que use el Context API para gestionar el estado global del usuario.
+
 2).Contador con useReducer: Crea un contador avanzado con múltiples operaciones (doblar, dividir, etc.) usando useReducer.
 3).Formulario avanzado con useReducer: Diseña un formulario complejo que use useReducer para manejar sus estados y validaciones.
 4).Custom Hook: Crea un custom hook llamado useFetch para realizar peticiones a una API de forma reutilizable.
