@@ -15,7 +15,6 @@ function Container() {
       <h1>Components container</h1>
       <DataContextProvider>
         <ComponentA/>
-
       </DataContextProvider>
 
     </div>
