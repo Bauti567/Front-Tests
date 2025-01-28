@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import './styles.css'
+import { CartContext } from '../context/context'
+
 
 function Products({products}) {
-
+  const contextData = useContext(CartContext);
+  const [total,setTotal] = useState(0);
+  
   return (
     <div>
         <h1>Mapeando productos</h1>
@@ -11,7 +15,7 @@ function Products({products}) {
             <div key={index} className="container">
                 <h1>{product.name}</h1>
                 <span>{product.price}</span>
-                <img src={product.img} alt="" />
+                <p>Data: {contextData}</p>
             </div>
            ))
         }

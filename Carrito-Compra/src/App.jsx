@@ -1,18 +1,22 @@
 import { useState } from "react";
 import Products from "./components/Products";
 import productos from "../data.js";
+import Header from "./components/Header.jsx";
+import { CartContextProvider } from "./context/context.jsx";
 
 function App() {
-  const agregarAlCarro = (product) =>{
-    console.log(first)
-  }
+  const agregarAlCarro = (product) => {
+    console.log(first);
+  };
 
   return (
     <>
-      <h1>Carrito de compras</h1>
-      <Products products={productos} />
+      <CartContextProvider>
+        <Header />
+        <Products products={productos} />
+      </CartContextProvider>
     </>
-  )
+  );
 }
 
 export default App;
