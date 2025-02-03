@@ -1,6 +1,9 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { CartContext } from '../context/context';
 
 function Header() {
+  
+  const {total,setTotal} = useContext(CartContext);
   return (
     <div>
         <ul>
@@ -8,6 +11,7 @@ function Header() {
           <li>News</li>
           <li>Contact</li>
           <li>About us</li>
+          <span>Total: {total}</span>
         </ul>
     </div>
   )

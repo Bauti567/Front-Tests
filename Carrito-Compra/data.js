@@ -19,6 +19,27 @@ const productos = [
     price: 4200,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTzpw50YulKREMykTlmKmdPXcH6SI7WWpKfA&s",
   },
+  {
+    name: "Carne",
+    price: 4200,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTzpw50YulKREMykTlmKmdPXcH6SI7WWpKfA&s",
+  },
+  {
+    name: "Pollo",
+    price: 4200,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTzpw50YulKREMykTlmKmdPXcH6SI7WWpKfA&s",
+  },
+  {
+    name: "Cerdo",
+    price: 4200,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTzpw50YulKREMykTlmKmdPXcH6SI7WWpKfA&s",
+  },
+  {
+    name: "Pollo",
+    price: 4200,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTzpw50YulKREMykTlmKmdPXcH6SI7WWpKfA&s",
+  },
+
 ]
 
 export default productos;

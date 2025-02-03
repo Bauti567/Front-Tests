@@ -1,31 +1,27 @@
 import React, { useContext, useState } from 'react'
-import './styles.css'
 import { CartContext } from '../context/context'
+import './styles.css'
 
 function Products({products}) {
-
-  const { total, setTotal } = useContext(CartContext);
+  const {total,setTotal} = useContext(CartContext);
   const [totalProduct, setTotalProduct] = useState(0);
+  
+  const addToCart = (productName) =>{
+    setTotalProduct(()=>{
 
-
-  const addToCart = () => {
-    setTotal((prevTotal) =>
-      typeof prevTotal === "number" ? prevTotal + 1 : 1
-    );
-  };
-
+    });
+    console.log('State local en el componente', productName);
+    
+  }
   return (
-    <div>
-        <h1>Mapeando productos</h1>
+    <div className='grid-container'>
         {
            products.map((product, index)=>(
             <div key={index} className="container">
-                <h1 className="container-title">{product.name}</h1>
                 <img src={product.img} alt="" className="card-img"/>
+                <h1 className="container-title">{product.name}</h1>
                 <span>{product.price}</span>
-                <p>Data: {total}</p>
-                <button onClick={addToCart}>Agregar al carrito</button>
-                <span>Total: {total}</span>
+                <button onClick={()=> addToCart(product.name)}>Agregar al carrito</button>
             </div>
            ))
         }
@@ -33,4 +29,4 @@ function Products({products}) {
   )
 }
 
-export default Products
+export default Products;
