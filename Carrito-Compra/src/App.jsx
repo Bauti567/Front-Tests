@@ -1,8 +1,7 @@
 import { useState } from "react";
-import Products from "./components/Products";
-import productos from "../data.js";
 import Header from "./components/Header.jsx";
 import { CartContextProvider } from "./context/context.jsx";
+import ProductsList from "./components/Products-List.jsx";
 
 function App() {
   const agregarAlCarro = (product) => {
@@ -13,7 +12,7 @@ function App() {
     <>
       <CartContextProvider>
         <Header />
-        <Products products={productos} />
+        <ProductsList/>
       </CartContextProvider>
     </>
   );
