@@ -4,50 +4,46 @@
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #e8e8e8;
-
 }
 
 .grid-container{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); /* Columnas flexibles */
-    gap: 1rem; /* Espacio entre tarjetas */
+    gap: 1rem; 
     padding: 2rem;
     justify-content: center;
 }
 
-.container {
-    --bg-card: #27272a;
-    --primary: #6d28d9;
-    --primary-800: #4c1d95;
-    --primary-shadow: #2e1065;
-    --light: #d9d9d9;
-    --zinc-800: #18181b;
-    --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
-  
+.card {
+    width: 190px;
+    height: 254px;
+    padding: .8em;
+    background: #f5f5f5;
     position: relative;
-  
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  
-    padding: 1rem;
-    width: 14rem;
-    background-color: var(--bg-card);
-  
-    border-radius: 1rem;
+    overflow: visible;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.card-img {
-    overflow: hidden;
-    cursor: pointer;
-  
-    position: relative;
-    z-index: 5;
-  
+.card-img{
+    height: 40%;
     width: 100%;
-    height: 8rem;
-    background-color: var(--primary-800);
-  
-    border-radius: 0.5rem;
+    border-radius: .5rem;
+    transition: .3s ease;
+
 }
-   
+
+.card-price{
+    font-weight: 900;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.favorite {
+    border: 1px solid #252525;
+    display: flex;
+    padding: .3em;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+}
+

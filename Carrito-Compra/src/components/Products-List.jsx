@@ -1,11 +1,27 @@
 import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/context";
+import "./styles.css";
+import Product from "./Product";
+
 
 function ProductsList({ products }) {
+  
   const { total, setTotal } = useContext(CartContext);
   const [totalProduct, setTotalProduct] = useState(0);
   const [fetchProducts, setFetchProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [filters,setFilters] = useState({
+    minPrice: 0
+
+  })
+
+  const filterProduct = () =>{
+    return products.filter(product => {
+      return(
+        product.price >= filters.minPrice 
+      )
+    })
+  }
 
   useEffect(() => {
     async function fetchData() {
@@ -26,15 +42,10 @@ function ProductsList({ products }) {
       {loading ? (
         <h1>Cargando pantalla</h1>
       ) : (
-        <div className="container">
+        <div>
           {fetchProducts.map((product) => (
-            <div className="card-product" key={product.id}>
-              <img src={product.image} alt="" className="img" />
-              <h2>{product.title}</h2>
-              <span>{product.price}</span>
-              <span>{product.rating.rate}</span>
-              <button>Corazon</button>
-              <button>Buy now</button>
+            <div className="contaiener" key={product.id}>
+              <Product product={product} />
             </div>
           ))}
         </div>

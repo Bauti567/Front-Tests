@@ -1,20 +1,15 @@
-import React, {useContext} from 'react'
-import { CartContext } from '../context/context';
+import React from 'react'
+import Filters from './Filters'
+
 
 function Header() {
-  
-  const {total,setTotal} = useContext(CartContext);
   return (
     <div>
-        <ul>
-          <li>Home</li>
-          <li>News</li>
-          <li>Contact</li>
-          <li>About us</li>
-          <span>Total: {total}</span>
-        </ul>
+      <h2>El header</h2>
+      <Filters/>
+      
     </div>
   )
 }
 
-export default Header;
+export default Header
