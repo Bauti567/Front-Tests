@@ -6,15 +6,9 @@ import Product from "./Product";
 
 function ProductsList({ products }) {
   
-  const { total, setTotal } = useContext(CartContext);
-  const [totalProduct, setTotalProduct] = useState(0);
   const [fetchProducts, setFetchProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [filters,setFilters] = useState({
-    minPrice: 0
-
-  })
-
+  
   const filterProduct = () =>{
     return products.filter(product => {
       return(

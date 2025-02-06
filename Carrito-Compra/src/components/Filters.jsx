@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function Filters() {
   return (
     <section className='filters'>
@@ -9,7 +10,7 @@ function Filters() {
 
         </div>
     </section>
-  )
+  );
 }
 
 export default Filters;

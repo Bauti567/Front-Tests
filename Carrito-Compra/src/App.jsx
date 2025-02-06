@@ -4,9 +4,21 @@ import { CartContextProvider } from "./context/context.jsx";
 import ProductsList from "./components/Products-List.jsx";
 
 function App() {
-  const agregarAlCarro = (product) => {
-    console.log(first);
-  };
+  const [product] = useState([]);
+  const [filter, setFilter] = useState({
+    category: 'all',
+    minPrice: 0
+  });
+
+  const filterProducts = () =>{
+    return product.filter(product => {
+      product.price >= filter.minPrice && (
+        filter.category === 'all' ||
+        product.category === filter.category
+      )
+    })
+  }
+  
 
   return (
     <>
