@@ -5,6 +5,7 @@ import "./styles.css";
 
 
 function Product({ product }) {
+
   return (
     <div className="card">
       <img src={product.image} alt="" className="card-img" />

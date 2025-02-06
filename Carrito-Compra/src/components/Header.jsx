@@ -2,12 +2,11 @@ import React from 'react'
 import Filters from './Filters'
 
 
-function Header() {
+function Header({changeFilters}) {
   return (
     <div>
       <h2>El header</h2>
-      <Filters/>
-      
+      <Filters changeFilters={changeFilters}/>
     </div>
   )
 }

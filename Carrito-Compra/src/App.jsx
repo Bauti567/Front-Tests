@@ -18,12 +18,14 @@ function App() {
       )
     })
   }
+
+  const filteredProducts = filterProducts()
   
 
   return (
     <>
-      <CartContextProvider>
-        <Header />
+      <CartContextProvider> 
+        <Header changeFilters={setFilter} />
         <ProductsList/>
       </CartContextProvider>
     </>
