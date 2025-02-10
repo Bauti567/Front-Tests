@@ -1,33 +1,42 @@
+import React from "react";
 import { useState } from "react";
-import Header from "./components/Header.jsx";
-import { CartContextProvider } from "./context/context.jsx";
-import ProductsList from "./components/Products-List.jsx";
+import { products as initialProducts } from "./mocks/product.json";
+import Product from "./components/Product";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-function App() {
-  const [product] = useState([]);
-  const [filter, setFilter] = useState({
-    category: 'all',
-    minPrice: 0
+
+function useFilters(params) {
+  const [products] = useState(initialProducts);
+  const [filters, setFilters] = useState({
+    category: "all",
+    minPrice: 0,
   });
 
-  const filterProducts = () =>{
-    return product.filter(product => {
-      product.price >= filter.minPrice && (
-        filter.category === 'all' ||
-        product.category === filter.category
-      )
-    })
-  }
+  const filterProducts = () => {
+    return products.filter((product) => {
+      return (
+        product.price >= filters.minPrice &&
+        (filters.category === "all" || product.category === filters.category)
+      );
+    });
+  };
+  return { filters, filterProducts, setFilters };
+}
 
-  const filteredProducts = filterProducts()
-  
+function App() {
+  const [products] = useState(initialProducts);
+  const {filters, filterProducts, setFilters} = useFilters();
+
+  const filteredProducts = filterProducts(products);
 
   return (
     <>
-      <CartContextProvider> 
-        <Header changeFilters={setFilter} />
-        <ProductsList/>
-      </CartContextProvider>
+      <h1>App carro de compras</h1>
+      <Header changeFilters={setFilters} />
+      <Product products={filteredProducts} />
+      <Footer filters={filters}/>
+
     </>
   );
 }
