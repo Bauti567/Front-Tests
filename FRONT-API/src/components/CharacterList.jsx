@@ -12,7 +12,6 @@ function NavPage(props){
           props.setPage(props.page + 1)
 
         }}>
-
         Page {props.page + 1}
       </button>
     </header>
@@ -24,7 +23,6 @@ function CharacterList() {
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
   const [page,setPage] = useState(1);
-
 
   useEffect(() => {
     async function fetchData() {

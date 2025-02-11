@@ -1,12 +1,13 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import CharacterList from "./components/CharacterList";
+import Header from "./components/Header";
 
 function App() {
 
   return (
     <div className="bg-dark text-white">
-      <h1 className="text-center display-1 py-4">Conexion con API</h1>
+      <Header/>
       <CharacterList></CharacterList>
     </div>
   );
