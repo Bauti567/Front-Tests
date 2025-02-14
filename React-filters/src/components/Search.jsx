@@ -19,20 +19,27 @@ function Search() {
 
     fetchData();
   }, []);
-  // metodos para el filtrado de datos
-  const results = !search ? users : users.filter((dato)=> dato.name.toLoweCase().includes)
-
   // fucion de busqueda
-  const Searcher = (event) =>{
+  const searcher = (event)=>{
     setSearch(event.target.value);
-    console.log(event.target.value)
+    //console.log(event.target.value)
+    
   }
+  // metodos para el filtrado de datos
+  // let results = [];
+  // if(!search){
+  //   results = users;
+  // } else {
+  //   users.filter((dato)=> dato.name.toLowerCase().includes(search.toLocaleLowerCase()));
+
+  // }
   
   // renderizado de la vista del componente
 
+
   return (
     <div>
-      <input onChange={Searcher} value={Searcher} type="text" placeholder="search" className="form-control"/>
+      <input value={search} type="text" placeholder="search" className="form-control"/>
       <h2>Tabla con filtros</h2>
       <table className="table table-striped table-hover mt-5 shadow-lg">
         <thead>
@@ -43,7 +50,7 @@ function Search() {
         </thead>
         <tbody>
           {
-            users.map((user)=>{
+            results.map((user)=>{
               return(
               <tr key={user.id}>
                 <td>{user.name}</td>
