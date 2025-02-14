@@ -1,31 +1,21 @@
-import { useState } from "react";
-
-function HomePage(params) {
-  return (
-    <div>
-      <h1>Home Page</h1>
-      <p>Pagina de ejemplo</p>
-    </div>
-  );
-}
-
-function About(params) {
-  return (
-    <div>
-      <h3>About</h3>
-      <span>Clon de React Router</span>
-    </div>
-  );
-}
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import UsersPage from "./pages/UsersPage";
+import NotFound from "./pages/NotFound";
 
 function App() {
-  const [currentPath,setCurrentPath] = useState(window.location.pathname);
-  
   return (
-    <main>
-      <HomePage/>
-      <About/>
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage/>} />
+        <Route path="/about" element={<AboutPage/>} />
+        <Route path="/users" element={<UsersPage/>}/>
+        <Route path="*" element={<NotFound/>}/>
+        
+      </Routes>
+    </BrowserRouter>
   );
 }
 
