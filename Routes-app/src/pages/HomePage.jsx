@@ -1,8 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function HomePage() {
+  const userId = '0411J'
+  
   return (
-    <div>HomePage</div>
+    <div>
+      <h1>Aplication</h1>
+      <Link to={`/user/${userId}`}>Aboute</Link>
+    </div>
   )
 }
 
