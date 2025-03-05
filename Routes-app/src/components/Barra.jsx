@@ -14,6 +14,12 @@ function Barra() {
         <li>
           <NavLink to='/about'>About</NavLink>
         </li>
+        <li>
+          <NavLink to='/user/:id'>Users</NavLink>
+        </li>
+        <li>
+          <NavLink to='/dashboard'>Dashboard</NavLink>
+        </li>
       </ul>
     </div>
 

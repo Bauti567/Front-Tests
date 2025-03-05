@@ -7,7 +7,7 @@ function HomePage() {
   return (
     <div>
       <h1>Aplication</h1>
-      <Link to={`/user/${userId}`}>Aboute</Link>
+      <Link to={`/user/${userId}`}>Home page</Link>
     </div>
   )
 }
