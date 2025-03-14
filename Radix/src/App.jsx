@@ -1,15 +1,16 @@
-import { Switch, Theme, Button, Slider, Progress, Card } from "@radix-ui/themes";
-import "./App.css";
+import { Switch, Theme, Button, Slider, Progress, Card, Box, Text} from "@radix-ui/themes";
 
 function App() {
   return (
-    <div>
-      <Switch></Switch>
+    <>
+      <Box>
+        <Card>
+          <Text size="4" weight="medium">Signin</Text>
+        </Card>
+      </Box>
+    </>
 
-      <Button>Hola Mundo</Button>
-      <Progress></Progress>
-      <Card></Card>
-    </div>
+
   );
 }
 
