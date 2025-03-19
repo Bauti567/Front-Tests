@@ -5,8 +5,7 @@ function App() {
   return (
     <div>
       <h1>El app</h1>
-      <Search/>
-      
+      <Search/>   
     </div>
   )
 }

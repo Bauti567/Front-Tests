@@ -1,65 +1,48 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Search() {
-  // setear los use state
-  const [users, setUsers] = useState([]);
+  const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
 
-  // funcion para traer datos
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/users"
-      );
-      const data = await response.json();
-      console.log(data);
-      setUsers(data);
-
+      try {
+        const response = await fetch("https://rickandmortyapi.com/api/character");
+        const result = await response.json();
+        setData(result.results);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     }
-
     fetchData();
   }, []);
-  // fucion de busqueda
-  const searcher = (event)=>{
-    setSearch(event.target.value);
-    //console.log(event.target.value)
-    
-  }
-  // metodos para el filtrado de datos
-  // let results = [];
-  // if(!search){
-  //   results = users;
-  // } else {
-  //   users.filter((dato)=> dato.name.toLowerCase().includes(search.toLocaleLowerCase()));
 
-  // }
-  
-  // renderizado de la vista del componente
-
+  // Filtramos los personajes según la búsqueda
+  const filteredData = data.filter((character) =>
+    character.name.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <div>
-      <input value={search} type="text" placeholder="search" className="form-control"/>
-      <h2>Tabla con filtros</h2>
-      <table className="table table-striped table-hover mt-5 shadow-lg">
-        <thead>
-          <tr className="bg-curso text-white">
-            <th>Name</th>
-            <th>Username</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            results.map((user)=>{
-              return(
-              <tr key={user.id}>
-                <td>{user.name}</td>
-                <td>{user.username}</td>
-              </tr>
-            )})
-          }
-        </tbody>
-      </table>
+      <h1>Personajes</h1>
+
+      <input
+        type="text"
+        placeholder="Buscar"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+
+      {filteredData.length > 0 ? (
+        filteredData.map((character) => (
+          <div key={character.id}>
+            <p>{character.name}</p>
+            <p>{character.status}</p>
+          </div>
+        ))
+      ) : (
+        <p>No se encontraron personajes</p>
+      )}
     </div>
   );
 }

@@ -1,8 +1,13 @@
+import { Theme } from '@radix-ui/themes';
 import React from 'react'
 
 function LoginPage() {
   return (
-    <div>LoginPage</div>
+    <section>
+      <Theme>
+
+      </Theme>
+    </section>
   )
 }
 
