@@ -1,9 +1,10 @@
 import React from 'react'
 
-function Customers() {
+function CustomersPage() {
   return (
-    <div>customers page</div>
+    <div>Customers Page</div>
   )
 }
 
-export default Customers;
+export default CustomersPage;
+

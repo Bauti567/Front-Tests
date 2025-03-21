@@ -1,9 +1,10 @@
 import React from 'react'
 
-function Invoices() {
+function InvoicesPage() {
   return (
-    <div>Invoices</div>
+    <div>InvoicesPage</div>
   )
 }
 
-export default Invoices;
+export default InvoicesPage;
+
